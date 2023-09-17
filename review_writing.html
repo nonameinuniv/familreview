@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<title>리뷰창</title>
+<meta charset="utf-8">
+
+<style> 
+  .back-button {
+    display: block;
+    margin-bottom: 10px;}
+
+    .image-container{
+    display: flex;
+    align-items: flex-start;
+    margin: auto;
+    max-width: 800px; 
+    text-align: center; 
+    justify-content: center; 
+    }
+
+    .image {
+      width: 130px;
+      height: auto;
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 50px;
+      margin-left: 40px;
+      max-width: 800px; 
+      text-align: center;
+      
+    }
+
+    .text{
+       
+       margin-top: 0;
+       font-size: 30px;
+       text-align: center;
+    }
+
+    .movie-info {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .movie-info-text {
+        margin-right: 5px;
+    }
+
+    .divider {
+    margin-top: 40px;
+    border: none;
+    border-top: 5px solid rgb(223, 222, 222);
+    }
+
+    .가족시청지수_소제목 {
+        font-size: 20px;
+        margin-top: 25px;
+        text-align: center;
+
+    }
+
+    .가족시청지수_점수 {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: 23px;
+        justify-content: center;
+    }
+
+
+    .rating-container {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; 
+    }
+
+    .rating-icon {
+    width: 32px; 
+    height: auto; 
+    margin: 0 5px; 
+    }
+
+    .가족시청지수_한줄후기 {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .divider-1 {
+        margin-top: 35px;
+        border: none;
+        border-top: 5px solid rgb(223, 222, 222);
+    }
+
+    .form-container {
+    margin-top: 10px;
+  }
+
+  .form-container label,
+  .form-container input {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .form-container textarea {
+    width: 100%;
+    height: 150px;
+  }
+
+  .form-container input[type="submit"] {
+    padding: 8px 50px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right; 
+  }
+</style>
+
+<body>
+    <div style="margin-bottom: 40px;">
+        <button onclick="history.back(-1);"> 뒤로가기 </button></div>
+        <div class="image-container">
+            <img src="범죄도시3_포스터.jpg" alt="이미지" class="image">
+            <div class="text-container">
+                <span class="text">범죄도시3</span>
+                <div class="movie-info">
+                    <span class="movie-info-text">2023</span>
+                    ㆍ
+                    <span class="movie-info-text">한국</span>
+                    ㆍ
+                    <span class="movie-info-text">액션</span>
+                </div>    
+            </div>    
+        </div> 
+
+<hr class="divider">
+
+<div class="가족시청지수_소제목_점수">
+<div class="가족시청지수_소제목">
+    가족시청지수 &nbsp;&nbsp;
+</div>
+
+<div class="가족시청지수_점수">
+    <div class="개인지수">
+    <label>
+        <input type="radio" name="rating" value="1" onclick="selectRating(1)">1
+    </label>
+    <label>
+        <input type="radio" name="rating" value="2" onclick="selectRating(2)">2
+    </label>
+    <label>
+        <input type="radio" name="rating" value="3" onclick="selectRating(3)">3
+    </label>
+    <label>
+        <input type="radio" name="rating" value="4" onclick="selectRating(4)">4
+    </label>
+    <label>
+        <input type="radio" name="rating" value="5" onclick="selectRating(5)">5
+    </label>
+    </div>
+    &nbsp;  /
+    <div class="전체지수">
+        &nbsp;  5
+    </div>
+</div>
+</div>
+
+
+<div class="가족시청지수_한줄후기">
+    "가족들이 너무 재밌대요"
+</div>
+
+<hr class="divider-1">
+
+<div style="text-align: center; font-size: 18px; margin-top: 25px;">이 점수를 주신 이유는?</div>
+<div style="text-align: center; font-size: 14px; margin-top: 10px;">이유를 작성해, 다른 가족의 평화를 지켜주세요. :) </div>
+
+<div class="form-container">
+    <form action="submit_review.php" method="post" id="reviewForm">
+      <label for="username">당신은 누구? (ex.장녀, 막내 등등) </label>
+      <input type="text" id="username" name="username" required>
+      <input type="hidden" id="rating" name="rating" value="">
+
+      <label for="review">이유를 알려주세요! </label>
+      <textarea id="review" name="review" oninput="checkLength()" required></textarea>
+        <div id="remaining">500 글자 남았어요!</div>
+      <input type="submit" value="리뷰 제출" onclick="submitForm()">
+    </form>
+
+
+</div>
+
+
+<script>
+    function checkLength(){
+        let review = document.getElementById("review");
+        let remaining = document.getElementById("remaining");
+
+        if (review.value.length > 500) {
+            review.value = review.value.substring(0,500);
+        }
+        remaining.innerText = 500 - review.value.length + "글자 남았어요!";
+
+    }
+
+    let selectedRating = null;
+
+function selectRating(score){
+    selectedRating = score;
+}
+
+function submitForm(){
+    if (selectedRating === null) {
+        alert("별점을 선택해주세요.");
+        return false; 
+    }
+    document.getElementById("rating").value = selectedRating;
+    document.getElementById("reviewForm").submit();
+}
+</script>
+
+</body>

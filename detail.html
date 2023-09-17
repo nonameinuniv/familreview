@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+<title>가족화목지수 상세</title>
+<meta charset="utf-8">
+
+<style>
+
+
+    .back-button {
+    display: block;
+    margin-bottom: 10px;}
+
+    .image-container{
+    display: flex;
+    align-items: flex-start;
+    margin: auto;
+    max-width: 800px;
+    }
+
+    .image {
+      width: 200px;
+      height: auto;
+      margin:auto
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 50px;
+      margin-left: 40px;
+      margin: auto;
+      max-width: 800px;
+      
+    }
+
+    .text{
+       
+       margin-top: 0;
+       font-size: 30px;
+       text-align: center;
+    }
+
+    .movie-info {
+        display: flex;
+        align-items: center;
+        margin-top: 28px;
+        text-align: center;
+    }
+
+.cookie img{
+
+    width: 20px;
+    height: auto;
+}
+
+.cookie {
+        display: flex;
+        margin-left: 10px;
+}
+
+.movie-info-text {
+        margin-right: 5px;
+    }
+
+
+.review-button {
+    margin-top: 25px;
+    padding: 8px 50px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.review-button img {
+    width: 15px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.cookie {
+        display: flex;
+        align-self: flex-start;
+        margin-left: 10px;
+        vertical-align: middle;
+}
+
+.cookie span {
+    margin-left: 5px;
+}
+
+.가족시청지수 {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+.가족시청지수 img {
+    width: 15px;
+    height: auto;
+    margin-left: 10px;
+    cursor: pointer; 
+}
+
+.rate{
+    background: url(평점_집_회색_최신.png) no-repeat;
+    background-size: cover;
+    width: 121px;
+    height: 20px;
+    position: relative;
+    margin-top: 15px;}
+.rate span{
+    position: absolute;
+    background: url(평점_집_블루_최신.png);
+    background-size: cover;
+    width: auto;
+    height: 30px; /*아니 얘 이렇게 설정해서 집 아이콘 비율 맞는데 왜 맞는 거임?*/
+    }
+
+    .rating-container {
+    display: flex;
+    align-items: flex-end;
+    }
+
+    .rating-text {
+    margin-left: 15px;
+    font-size: 16px;
+
+}
+
+.dialog{
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.divider {
+    margin-top: 50px;
+    border: none;
+    border-top: 20px solid rgb(223, 222, 222);
+}
+
+.review-quest{
+    margin-top: 30px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.review-info-line{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-left: 20px;
+    text-align: center;
+
+}
+
+.review-info{
+    margin-right: 40px;
+    margin-top: 20px;
+    text-align: center; 
+}
+
+.review-text{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.divider-1{
+    margin-top: 40px;
+    border: none;
+    border-top: 2px solid rgb(223, 222, 222);
+
+}
+
+.review-text{
+    text-align: center;
+}
+
+a {
+  text-decoration: none; 
+  color: inherit;
+}
+</style>
+
+</head>
+
+<body>
+    <div style="margin-bottom: 40px;">
+    <button onclick="history.back(-1);"> 뒤로가기 </button></div>
+    <div class="image-container">
+        <img src="범죄도시3_포스터.jpg" alt="이미지" class="image">
+        <div class="text-container">
+            <span class="text">범죄도시3</span>
+            <div class="movie-info">
+                <span class="movie-info-text">2023</span>
+                ㆍ
+                <span class="movie-info-text">한국</span>
+                ㆍ
+                <span class="movie-info-text">액션</span>
+                ㆍ
+                <div class="cookie">
+                    <img src="cookie.png" alt="cookie">
+                    <span>쿠키있음</span>
+                </div>
+            </div>  
+                <a href="review_writing.html"><button class="review-button"><img src="pencil.png" alt="리뷰버튼">가족과의 시청, 어땠나요?</button></a>
+                <span class="가족시청지수">가족시청지수 <a href="rating.html"><img src="느낌표.png" alt="가족시청지수"></a></span>
+               
+                <div class="rating-container">
+                    <div class="rate">
+                        <span style="width: 50%"></span>
+                    </div>
+                    <span class="rating-text"> 평점 3.5</span>
+                </div>
+                <div class="dialog">"가족들과 무난하게 시청하기 좋아요."</div>
+            
+
+            </div>
+            </div>
+    </div>
+    <hr class="divider">
+
+    <div class="review-quest"> <h3>가족과의 시청, 어땠나요?</h3> </div>
+       
+    <div class="review-container">  
+        <div class="review-info-line">
+            <div class="review-info">3남1녀 중 막내</div>
+            <div class="review-info"><img src="집.png" alt="집" width="15px">&nbsp;5</div>
+            <div class="review-info">2023.02.08</div>
+        </div>
+        <div class="review-text"> 가족이랑 다같이 봤는데 개그꽁트 같은 구성이라 깔깔 웃으면서 봤어요 ㅋㅋㅋㅋ 다같이 보라고 만든 영화인 것 같아요  </div>
+    </div>
+
+    <hr class="divider-1">
+
+    <div class="review-container">  
+        <div class="review-info-line">
+            <div class="review-info">최강장녀</div>
+            <div class="review-info"><img src="집.png" alt="집" width="15px">&nbsp;2</div>
+            <div class="review-info">2023.02.08</div>
+        </div>
+        <div class="review-text"> 어린 동생들이랑 같이 보고 왔는데요. 저는 재밌었지만 동생들이 보기엔 폭력적인 장면들도 많았던 것 같아요. 저는 그래서 평점 낮게 드렸습니다 ㅜ </div>
+    </div>
+
+    <hr class="divider-1">
+
+    <div class="review-container">  
+        <div class="review-info-line">
+            <div class="review-info">늦둥이..</div>
+            <div class="review-info"><img src="집.png" alt="집" width="15px">&nbsp;4</div>
+            <div class="review-info">2023.02.08</div>
+        </div>
+        <div class="review-text"> 저희 아빠가 웃음 장벽이 굉장히 높고 특이하신데, 이 영화는 보는 내내 엄청 웃으면서 보시더라구요 ㅋㅋ 그치만 개인적으로 저는 선정적인 걸 싫어해서.. 4점 드립니다  </div>
+    </div>
+     /*위로가기 버튼 추가해야댐*/
+
+    
+
+</body>
+</html>
