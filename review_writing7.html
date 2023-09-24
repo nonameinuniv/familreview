@@ -172,15 +172,15 @@
     <div style="margin-bottom: 40px;">
         <button onclick="history.back(-1);"> 뒤로가기 </button></div>
         <div class="image-container">
-            <img src="잠.jpg" alt="이미지" class="image">
+            <img src="그란투리스모.jpg" alt="이미지" class="image">
             <div class="text-container">
-                <span class="text">잠</span>
+                <span class="text">그란 투리스모</span>
                 <div class="movie-info">
                     <span class="movie-info-text">2023</span>
                     ㆍ
-                    <span class="movie-info-text">한국</span>
+                    <span class="movie-info-text">미국</span>
                     ㆍ
-                    <span class="movie-info-text">스릴러</span>
+                    <span class="movie-info-text">액션</span>
                 </div>    
             </div>    
         </div> 
@@ -236,7 +236,7 @@
       <label for="review"><div class = "reason">이유를 알려주세요! </div></label>
       <textarea id="review" name="review" oninput="checkLength()" required></textarea>
         <div id="remaining" class="remaining">500 글자 남았어요!</div>
-      <input type="submit" value="리뷰 제출" onclick="submitForm()" href="review_confrim.html">
+      <input type="submit" value="리뷰 제출" onclick="submitForm()">
     </form>
 
 
@@ -268,8 +268,6 @@ function submitForm(){
     }
     document.getElementById("rating").value = selectedRating;
     document.getElementById("reviewForm").submit();
-
-    alert("리뷰가 성공적으로 제출되었습니다.");
 }
 </script>
 
